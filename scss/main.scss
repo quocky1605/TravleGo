@@ -3,6 +3,7 @@
 *:focus {
     outline: none;
 }
+
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
@@ -26,13 +27,77 @@ body {
     }
 
     #wrapper {
+        .stick {
+            position: relative;
+            .menuBar {
+                z-index: 99;
+                padding: 0 30px 0 20px;
+                position: absolute;
+                top: 20px;
+                right: 50px;
+                cursor: pointer;
+                i {
+                    font-size: 40px;
+                }
+            }
+        }
+
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
         height: 100vh;
-
         section {
             height: 100vh;
             scroll-snap-align: start;
+        }
+        .navMenuMobile {
+            right: 0;
+            position: absolute;
+            padding: 0 10px 0 10px;
+            height: 100vh;
+            width: 55%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            .inputHolder {
+                margin-top: 50px;
+                width: 100%;
+                border-radius: 50px;
+                background: #fbfafa42;
+                .searchInput {
+                    padding: 0 0 0 15px;
+                    margin: 0;
+                    width: 80%;
+                    height: 50px;
+                    opacity: 1;
+                    background: transparent;
+                    box-sizing: border-box;
+                    border: none;
+                    outline: none;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #fff;
+                }
+
+                .search-icon {
+                    cursor: pointer;
+                    width: 50px;
+                    height: 50px;
+                    color: #fff;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: 16px;
+                    font-weight: 400;
+                    position: relative;
+                }
+            }
+            ul.listMenu {
+                li {
+                    margin: 30px 0;
+                    padding: 0 20px;
+                    box-sizing: border-box;
+                    font-size: 16px;
+                }
+            }
         }
 
         // firstSection
@@ -47,13 +112,6 @@ body {
                     color: white;
                 }
 
-                .menuBar {
-                    cursor: pointer;
-
-                    i {
-                        font-size: 40px;
-                    }
-                }
                 .inputHolder {
                     width: fit-content;
                     border-radius: 50px;

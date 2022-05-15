@@ -1,11 +1,13 @@
 
 $(document).ready(function () {
 
-    // $('.search-icon').click(function (e) {
-    //     e.preventDefault()
-    //     $('input.searchInput').addClass('activeInput')
-    //     $('input.searchInput').focus()
-    // })
-
+    $(".menuBar").click(function (e) {
+        $(this).addClass('d-none')
+        $('.navMenuMobile').removeClass("d-none")
+    })
+    $('section').click(function () {
+        $('.menuBar').removeClass('d-none')
+        $('.navMenuMobile').addClass("d-none")
+    })
 
 });
